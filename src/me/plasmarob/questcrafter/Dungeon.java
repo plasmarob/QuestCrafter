@@ -19,7 +19,9 @@ import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 
 import com.sk89q.worldedit.IncompleteRegionException;
+import com.sk89q.worldedit.WorldEdit;
 import com.sk89q.worldedit.bukkit.BukkitAdapter;
+import com.sk89q.worldedit.bukkit.BukkitPlayer;
 import com.sk89q.worldedit.bukkit.WorldEditPlugin;
 import com.sk89q.worldedit.regions.CuboidRegion;
 import com.sk89q.worldedit.regions.Region;
@@ -295,6 +297,34 @@ public class Dungeon {
 			e.printStackTrace();
 		}
 		
+		
+		
+		//WorldEdit.getInstance().getSessionManager().get(bp);
+		/*
+		Selection sel = QuestCrafter.getWE().getSelection(player);
+		if (sel instanceof CuboidSelection && 
+	    		sel.getHeight()*sel.getLength()*sel.getWidth() < 3000 ) {
+			if (false)  { //TODO: check this
+				player.sendMessage(red + "Selection is not within dungeon boundaries.");
+				return false;
+			}
+			Block target = player.getTargetBlock(null, 20);
+			if (target.getType() == Material.EMERALD_ORE) {
+				if (Tools.blockWithin(target, min, max) && target.getWorld() == world) {
+					storages.put(name, new Storage(player, target, name, this));
+					player.sendMessage(prp + "Storage " + name + " created!");
+					return true;
+				} else
+					player.sendMessage(red + "This block is not within dungeon boundaries.");
+			} else 
+				player.sendMessage(red + "Error: Enter this command while facing " + Material.EMERALD_ORE.toString());
+	    } else {
+	    	if (sel instanceof CuboidSelection)
+		    	player.sendMessage(red + "Too many blocks");
+		    else
+		    	player.sendMessage(red + "Invalid WorldEdit selection.  Must be cuboid.");
+	    }
+	    */
 		return false;
 	}
 	
