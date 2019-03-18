@@ -1,0 +1,24 @@
+name: QuestCrafter
+version: 0.0.1
+api-version: 1.13
+depend: [WorldEdit, EffectLib]
+softdepend: [Multiverse-Core]
+main: me.plasmarob.questcrafter.QuestCrafter
+description: LoZ / AdventureCraft plugin
+commands:
+  heal:
+    description: test command. Type /qc help for more.
+  qc:
+    description: main command. Type /qc help for more.
+  qca:
+    description: /qc add. Type /qc help for more.
+  qce:
+    description: /qc edit. Type /qc help for more.
+  qci:
+    description: /qc info. Type /qc help for more.
+  qcn:
+    description: /qc new. Type /qc help for more.
+  qcsf:
+    description: /qc storageframe. Type /qc help for more.
+  questcrafter:
+    description: main command. Type /qc help for more.
