@@ -96,9 +96,6 @@ public class Tools {
 				Color.fromRGB(r, g, b), Color.fromRGB(r, g, b)).start();
 	}
 	
-
-	//@SuppressWarnings("deprecation")
-	// TODO: replace with Location, BlockData
 	public static void outline(Player player, Location min, Location max, BlockData frame, BlockData corners, int seconds) {
 		int mx = min.getBlockX();
 		int my = min.getBlockY();

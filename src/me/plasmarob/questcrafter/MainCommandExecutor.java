@@ -224,16 +224,6 @@ public class MainCommandExecutor implements CommandExecutor {
 		if(subcommand.equals("new")) {
 			if(last_index >= 1) {
 				if (!dungeons.containsKey(args[1])) {
-					
-					//SessionOwner so;
-					//SessionManager sm = new SessionManager(WorldEdit.getInstance());
-					//BukkitImplAdapter.adapt(player);
-					
-					
-					// TODO
-					//BukkitAdapter ba;
-					//LocalSession ls = WorldEdit.getInstance().getSessionManager().get(player);
-					//Selection sel = QuestCrafter.getWE().getSelection(player);
 					WorldEditPlugin we = QuestCrafter.getWE();
 					try {
 						Region region = we.getSession(player).getSelection(BukkitAdapter.adapt(player.getWorld()));
@@ -249,20 +239,8 @@ public class MainCommandExecutor implements CommandExecutor {
 					    } else
 					        say(red+"Invalid WorldEdit Selection");
 					} catch (IncompleteRegionException e) {
-						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
-					/*
-					if (sel instanceof CuboidSelection) {
-				        Location min = sel.getMinimumPoint();
-				        Location max = sel.getMaximumPoint();
-				        new Dungeon(args[1], sel.getWorld(), min, max);
-				        selectedDungeons.put(player, args[1]);
-				        say(grn+"Dungeon created and selected");
-				        return true;
-				    } else
-				        say(red+"Invalid WorldEdit Selection");
-				        */
 				} else
 					say(red+"Dungeon with this name already exists");
 			} else 
